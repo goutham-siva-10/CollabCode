@@ -1,14 +1,16 @@
-# Use a lightweight JDK image
+# Use Java 21
 FROM eclipse-temurin:21-jdk-alpine
 
-# Set the working directory
 WORKDIR /app
 
-# Copy jar file into container
-COPY target/*.jar app.jar
+# Copy all source code
+COPY . .
 
-# Expose port (default Spring Boot port)
+# Build the app inside Docker
+RUN ./mvnw clean package -DskipTests
+
+# Copy the built jar
+RUN cp target/*.jar app.jar
+
 EXPOSE 8080
-
-# Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
