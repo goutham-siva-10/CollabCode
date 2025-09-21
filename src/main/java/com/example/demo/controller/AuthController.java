@@ -5,6 +5,7 @@ import com.example.demo.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+@CrossOrigin(origins = "https://goutham-siva-10.github.io")
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor

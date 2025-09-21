@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
+@CrossOrigin(origins = "https://goutham-siva-10.github.io")
 @RestController
 @RequestMapping("/api/documents")
 public class DocumentController {
