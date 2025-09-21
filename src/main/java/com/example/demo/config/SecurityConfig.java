@@ -41,7 +41,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.addAllowedOrigin("https://goutham-siva-10.github.io/CollabCodeFrontEnd"); // Explicit origin for React
+        configuration.addAllowedOrigin("https://goutham-siva-10.github.io"); // Explicit origin for React
         configuration.addAllowedMethod("*"); // Allow all methods
         configuration.addAllowedHeader("*"); // Allow all headers
         configuration.setAllowCredentials(true); // Enable credentials
