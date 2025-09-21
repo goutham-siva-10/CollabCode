@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CollabCode.iml" filepath="$PROJECT_DIR$/.idea/CollabCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/collabcode.iml" filepath="$PROJECT_DIR$/.idea/collabcode.iml" />
     </modules>
   </component>
 </project>
