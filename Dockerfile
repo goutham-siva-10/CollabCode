@@ -1,15 +1,17 @@
-# Use Java 21
 FROM eclipse-temurin:21-jdk-alpine
 
 WORKDIR /app
 
-# Copy all source code
+# Copy all source files
 COPY . .
 
-# Build the app inside Docker
+# Give permission to Maven wrapper
+RUN chmod +x mvnw
+
+# Build the app
 RUN ./mvnw clean package -DskipTests
 
-# Copy the built jar
+# Copy the jar to a fixed name
 RUN cp target/*.jar app.jar
 
 EXPOSE 8080
